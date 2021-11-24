@@ -10,3 +10,8 @@ mas com o tempo desenvolver uma interface própria.
 
 Não sei quanto tempo irei levar para fazer essa implementação, mas tenho a ideia de 
 já deixar para produção em fevereiro de 2022.
+
+Data: 24/11/2021
+
+Iniciando a codificação das classes que irão compor essa API.
+Criando as classes que irão controlar a entrada dos produtos que a loja irá trabalhar.
