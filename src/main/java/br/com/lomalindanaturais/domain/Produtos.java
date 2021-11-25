@@ -11,7 +11,6 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
-
 public class Produtos implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -27,7 +26,7 @@ public class Produtos implements Serializable {
     private Double precoDeCusto;
     private Double precoDeVenda;
     private Double percentualdeAcrescimo;
-    private Double decimalAcrescimo = percentualdeAcrescimo/100; //variavel para calculo do preco de venda
+    private Double decimalAcrescimo;
     private String descricaoProduto;
 
     @Override
