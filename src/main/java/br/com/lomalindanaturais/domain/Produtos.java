@@ -3,26 +3,31 @@ package br.com.lomalindanaturais.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Getter
 @Setter
-public class Produtos extends Serializable {
-    public static final long serialVersionUID = 1L;
+
+public class Produtos implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+//    @Column(name = "id", nullable = false)
+    private Long id;
     private String nomeProduto;
     private Double quantidadeProduto;
     private String tipoEmbalagem;
+    private Double precoDeCusto;
+    private Double precoDeVenda;
+    private Double percentualdeAcrescimo;
+    private Double decimalAcrescimo = percentualdeAcrescimo/100; //variavel para calculo do preco de venda
     private String descricaoProduto;
 
     @Override
